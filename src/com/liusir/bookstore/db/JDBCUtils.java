@@ -12,28 +12,29 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
  * 
- * JDBC 的工具类
+ * JDBC 鐨勫伐鍏风被
  *
  */
 public class JDBCUtils {
 
+	
 	private static DataSource dataSource = null;
 	
 	static{
 		dataSource = new ComboPooledDataSource("javawebapp");
 	}
 	 
-	//获取数据库连接
+	//鑾峰彇鏁版嵁搴撹繛鎺�
 	public static Connection getConnection(){  
 		try {
 			return dataSource.getConnection();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DBException("数据库连接错误!");
+			throw new DBException("鏁版嵁搴撹繛鎺ラ敊璇�!");
 		}
 	}
  
-	//关闭数据库连接
+	//鍏抽棴鏁版嵁搴撹繛鎺�
 	public static void release(Connection connection) {
 		try {
 			if(connection != null){
@@ -41,11 +42,11 @@ public class JDBCUtils {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DBException("数据库连接错误!");
+			throw new DBException("鏁版嵁搴撹繛鎺ラ敊璇�!");
 		}
 	}
 	
-	//关闭数据库连接
+	//鍏抽棴鏁版嵁搴撹繛鎺�
 	public static void release(ResultSet rs, Statement statement) {
 		try {
 			if(rs != null){
@@ -53,7 +54,7 @@ public class JDBCUtils {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DBException("数据库连接错误!");
+			throw new DBException("鏁版嵁搴撹繛鎺ラ敊璇�!");
 		}
 		
 		try {
@@ -62,7 +63,7 @@ public class JDBCUtils {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DBException("数据库连接错误!");
+			throw new DBException("鏁版嵁搴撹繛鎺ラ敊璇�!");
 		}
 	}
 	
