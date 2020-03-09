@@ -7,7 +7,7 @@ public class User {
 	private Integer userId;
 	private String username;
 	private int accountId;
-	 
+	 //这里是我们的家
 	private Set<Trade> trades = new LinkedHashSet<Trade>();
 
 	public void setTrades(Set<Trade> trades) {
