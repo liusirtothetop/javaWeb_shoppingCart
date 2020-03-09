@@ -8,6 +8,7 @@ public interface AccountDao {
 	 * 根据 accountId 获取对应的 Account 对象
 	 * @param accountId
 	 * @return
+	 * hahahaahahha
 	 */
 	public abstract Account get(Integer accountId);
 
