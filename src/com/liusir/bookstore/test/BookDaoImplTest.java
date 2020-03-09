@@ -1,10 +1,8 @@
 package com.liusir.bookstore.test;
 
-import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
 
 import com.liusir.bookstore.dao.BookDao;
 import com.liusir.bookstore.daoImpl.BookDaoImpl;
@@ -16,8 +14,7 @@ class BookDaoImplTest {
 
 	
 	private BookDao bookdao=new BookDaoImpl();
-	
-	@Test
+
 	void testGetBook() {
 		System.out.println("nihao");
 		CriteriaBook  cb = new CriteriaBook(50, 60,2);
@@ -27,7 +24,6 @@ class BookDaoImplTest {
 
 	}
 
-	@Test
 	void testGetPage() {
 		CriteriaBook  cb = new CriteriaBook(50, 60,2);
 	    
@@ -37,13 +33,10 @@ class BookDaoImplTest {
 	    
 	}
 
-	@Test
 	void testGetTotalBookNumber() {
 		
 		
 	}
-
-	@Test
 	void testGetPageList() {
 
 		CriteriaBook  cb = new CriteriaBook(50, 60, 90);
@@ -51,7 +44,6 @@ class BookDaoImplTest {
 	    System.out.println(pageList);
 	}
 
-	@Test
 	void testGetStoreNumber() {
   
 		int storeNumber = bookdao.getStoreNumber(2);
@@ -59,9 +51,7 @@ class BookDaoImplTest {
 	
 	}
 
-	@Test
 	void testBatchUpdateStoreNumberAndSalesAmount() {
-		fail("Not yet implemented");
 	}
 
 }

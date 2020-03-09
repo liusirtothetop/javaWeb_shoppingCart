@@ -1,8 +1,6 @@
 package com.liusir.bookstore.test;
 
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 import com.liusir.bookstore.dao.AccountDao;
@@ -24,19 +22,18 @@ public class AccountDaoImplTest {
 	TradeDao trade=new TradeDaoImpl();
 	UserDao user=new UserDaoImpl();
 	AccountDao accountDao=new AccountDaoImpl();
-	@org.junit.Test
+
 	public void Test() {
 		Account account = accountDao.get(1);
 		System.out.println(account.getBalance());
 		
 	}
 
-	@org.junit.Test
+	
 	public void Test1() {
 		accountDao.updateBalance(1, 50);
 		
-	}
-	@org.junit.Test
+	}	
 	public void Test2() {
 		User user2 = user.getUser("AAA");
 		
@@ -44,7 +41,7 @@ public class AccountDaoImplTest {
 		
 	}
 	
-	@org.junit.Test
+
 	public void test3() {
 		Trade trade1=new Trade();
 		trade1.setUserId(3);
@@ -53,7 +50,7 @@ public class AccountDaoImplTest {
 
 		
 	}
-	@org.junit.Test
+
 	public void test4() {
 //     TradeItem tradeItem=new TradeItem();
 //     tradeItem.setBookId(1);
